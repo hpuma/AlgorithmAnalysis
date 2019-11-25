@@ -1,2 +1,2 @@
-# CSC220000-Python
-CSC220000 Class Algorithms in Python
+# CSC22000-Python
+CSC22000 Class Algorithms in Python
