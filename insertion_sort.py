@@ -1,4 +1,4 @@
-def insertionSort(a):
+def InsertionSort(a):
     if(len(a) < 2):
         return
     for i in range(1,len(a)):
@@ -12,5 +12,5 @@ def insertionSort(a):
 testArr = [1,3,5,2,6]
 print("Before:\t",testArr)
 # testArr.sort()
-insertionSort(testArr)
+InsertionSort(testArr)
 print("After:\t",testArr)
