@@ -28,7 +28,8 @@ def Merge(A,p,q,r):
         else:
             A[k] = R[j]
             j+=1
-testArr = [1,3,5,2,6]
+            
+testArr = [9,1,3,2,4]
 print("Before:\t",testArr)
 MergeSort(testArr,0,4)
 print("After:\t",testArr)

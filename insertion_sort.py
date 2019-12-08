@@ -9,8 +9,7 @@ def InsertionSort(a):
             j-=1
         a[j+1] = key
 
-testArr = [1,3,5,2,6]
+testArr = [3,7,2,5,8]
 print("Before:\t",testArr)
-# testArr.sort()
 InsertionSort(testArr)
 print("After:\t",testArr)
