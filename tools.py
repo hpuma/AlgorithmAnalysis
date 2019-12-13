@@ -30,18 +30,20 @@ def algorithm_test(algorithm,test_list,p=0,r=0):
     else: 
         wrapped_algorithm = fwrap(algorithm,test_list)
     print("Testing:\t", algorithm.__name__)
-    print("Time:\t",timeit.timeit(wrapped_algorithm))
+    print("Time:\t",round(timeit.timeit(wrapped_algorithm,number=1)*1000.0,6),"ms")
     print("Output:",test_list,end="\n\n")
 
-    
 # Tests all the algorithms
 def test_all_algorithms(list_size):
     print("Generating Random List:\tn =",list_size)
     random_list = BuildList(list_size)
     last_index = list_size-1
-    if len(random_list) <= 100:
-        print(random_list,end="\n\n")
+    if len(random_list) > 0 and len(random_list) <= 100:
+        print("Test List:\t",random_list)
+    elif len(random_list) > 100 and len(random_list) > 0:
+        print("Non-Empty List Length=",len(random_list))
+    print("")
+    algorithm_test(InsertionSort,list.copy(random_list))
     algorithm_test(MergeSort,list.copy(random_list),0,last_index)
     algorithm_test(HeapSort,list.copy(random_list))
     algorithm_test(QuickSort,list.copy(random_list),0,last_index)
-    algorithm_test(InsertionSort,list.copy(random_list))
