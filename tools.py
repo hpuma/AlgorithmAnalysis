@@ -1,4 +1,4 @@
-from insertion_sort import InsertionSort
+from algorithm_implementations import InsertionSort,MergeSort,HeapSort,QuickSort
 from random import randrange
 import timeit
 import sys
@@ -16,6 +16,7 @@ def BuildList(list_size):
                 input_values[rand_val] = True
                 rand_key = True
     return list(input_values.keys())
+
 # Wraps a function with arguments and returns the same function as a function with no arguments
 # This is used alongised timeit.timeit
 def fwrap(func,*args,**kwargs):
@@ -23,33 +24,24 @@ def fwrap(func,*args,**kwargs):
             return func(*args,**kwargs)
         return fwrapper
 # Tests a single algorithm function and Printing it's results
-def algorithm_test(algorithm,test_list):
-    wrapped_algorithm = fwrap(algorithm,test_list)
+def algorithm_test(algorithm,test_list,p=0,r=0):
+    if(p == 0 and r!=0):
+        wrapped_algorithm = fwrap(algorithm,test_list,p,r)
+    else: 
+        wrapped_algorithm = fwrap(algorithm,test_list)
     print("Testing:\t", algorithm.__name__)
     print("Time:\t",timeit.timeit(wrapped_algorithm))
-    print("Output:",test_list)
-    
+    print("Output:",test_list,end="\n\n")
 
+    
 # Tests all the algorithms
 def test_all_algorithms(list_size):
     print("Generating Random List:\tn =",list_size)
     random_list = BuildList(list_size)
+    last_index = list_size-1
     if len(random_list) <= 100:
-        print(random_list)
+        print(random_list,end="\n\n")
+    algorithm_test(MergeSort,list.copy(random_list),0,last_index)
+    algorithm_test(HeapSort,list.copy(random_list))
+    algorithm_test(QuickSort,list.copy(random_list),0,last_index)
     algorithm_test(InsertionSort,list.copy(random_list))
-
-# ALGORITHM TOOLS
-def left(index):
-    return (2*index+1)
-def right(index):
-    return (2*index+2)
-def swap(A,a,b):
-    temp = A[a]
-    A[a] = A[b]
-    A[b] = temp
-def findMax(A):
-    max = -sys.maxsize
-    for i in A:
-        if i > max:
-            max = i
-    return max

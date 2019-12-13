@@ -21,7 +21,7 @@ def buildMaxHeap(A):
         Heapify(A,len(A),i)
     
 def HeapSort(A):
-    if len(A)<=1:
+    if len(A) <= 1:
         return A
     buildMaxHeap(A)
     last_index = len(A) 
