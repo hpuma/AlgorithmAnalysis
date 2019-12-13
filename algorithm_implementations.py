@@ -10,12 +10,6 @@ def swap(A,a,b):
     temp = A[a]
     A[a] = A[b]
     A[b] = temp
-def findMax(A):
-    max = -sys.maxsize
-    for i in A:
-        if i > max:
-            max = i
-    return max
 # ALL ALGORITHM IMPLEMENTATIONS
 # INSERTION SORT
 def InsertionSort(a):

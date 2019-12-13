@@ -36,11 +36,10 @@ def algorithm_test(algorithm,test_list,p=0,r=0):
     print("Testing:\t", algorithm.__name__)
     
     print("Time:\t",round(timeit.timeit(wrapped_algorithm,number=1)*1000.0,6),"ms")
-    print(test_list,'\nSorted:\t',isSorted(test_list))
-    # if(len(test_list) >=2 and len(test_list) <=100):
-    #     print("Output:",test_list)
-    # elif(len(test_list) > 100):
-    #     print("Sorted:\t",isSorted(test_list))
+    if(len(test_list) >=2 and len(test_list) <=100):
+        print("Output:",test_list,"\nSorted:\t",isSorted(test_list))
+    elif(len(test_list) > 100):
+        print("Sorted:\t",isSorted(test_list))
     print("")
 # Tests all the algorithms
 def test_all_algorithms(list_size):
