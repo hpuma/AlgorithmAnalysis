@@ -1,4 +1,4 @@
-from algorithm_implementations import InsertionSort,MergeSort,HeapSort,QuickSort
+from algorithm_implementations import InsertionSort,MergeSort,HeapSort,QuickSort,QuickSortPivot
 from random import randrange
 import timeit
 import sys
@@ -47,3 +47,4 @@ def test_all_algorithms(list_size):
     algorithm_test(MergeSort,list.copy(random_list),0,last_index)
     algorithm_test(HeapSort,list.copy(random_list))
     algorithm_test(QuickSort,list.copy(random_list),0,last_index)
+    algorithm_test(QuickSortPivot,list.copy(random_list),0,last_index)

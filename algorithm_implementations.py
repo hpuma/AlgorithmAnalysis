@@ -1,5 +1,6 @@
 import math
 import sys
+from random import randrange
 
 # AUXILARY FUNCTIONS FOR ALGORITHM IMPLEMENTATIONS
 def left(index):
@@ -96,8 +97,22 @@ def Partition(A,p,r):
             swap(A,i,j)
     swap(A,i+1,r)
     return i+1
+def PartitionPivot(A,p,r):
+    x = A[randrange(p,r+1)]
+    i = p-1
+    for j in range(p,r):
+        if(A[j] <= x):
+            i+=1
+            swap(A,i,j)
+    swap(A,i+1,r)
+    return i+1
 def QuickSort(A,p,r):
     if(p < r):
         q = Partition(A,p,r)
         QuickSort(A,p,q-1)
+
+def QuickSortPivot(A,p,r):
+    if(p < r):
+        q = PartitionPivot(A,p,r)
+        QuickSortPivot(A,p,q-1)
 
