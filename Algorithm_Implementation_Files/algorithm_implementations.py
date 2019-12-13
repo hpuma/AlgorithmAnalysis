@@ -1,7 +1,6 @@
 import math
 import sys
 from random import randrange
-
 # AUXILARY FUNCTIONS FOR ALGORITHM IMPLEMENTATIONS
 def left(index):
     return (2*index+1)
@@ -86,18 +85,9 @@ def buildMaxHeap(A):
     for i in range(len(A),-1,-1):
         Heapify(A,len(A),i)
     
-# QUICK SORT
+# QUICK SORT PIVOT LAST INDEX (REGULAR)
 def Partition(A,p,r):
     x = A[r]
-    i = p-1
-    for j in range(p,r):
-        if(A[j] <= x):
-            i+=1
-            swap(A,i,j)
-    swap(A,i+1,r)
-    return i+1
-def PartitionPivot(A,p,r):
-    x = A[randrange(p,r+1)]
     i = p-1
     for j in range(p,r):
         if(A[j] <= x):
@@ -109,9 +99,23 @@ def QuickSort(A,p,r):
     if(p < r):
         q = Partition(A,p,r)
         QuickSort(A,p,q-1)
-
+        QuickSort(A,q+1,r)
+# QUICKSORT WITH RANDOM PIVOT (Lomuto Partitioning)
+def PartitionPiv(A,p,r):
+    x = A[r]
+    i = p
+    for j in range(p,r):
+        if(A[j] <= x):
+            swap(A,i,j)
+            i+=1
+    swap(A,i,r)
+    return i
+def PartitionPivot(A,p,r):
+    rand_pivot = randrange(p,r+1)
+    swap(A,rand_pivot,r)
+    return PartitionPiv(A,p,r)
 def QuickSortPivot(A,p,r):
     if(p < r):
         q = PartitionPivot(A,p,r)
         QuickSortPivot(A,p,q-1)
-
+        QuickSortPivot(A,q+1,r)
