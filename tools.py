@@ -3,7 +3,11 @@ from random import randrange
 import timeit
 import sys
 # ALGORITHM TEST TOOLS
-
+def isSorted(A):
+    for i in range(1,len(A)):
+        if(A[i-1] > A[i]):
+            return False
+    return True
 # Creates a random_list of size "list_size" where the range of list values is from 1 to list_size-1
 def BuildList(list_size):
     input_values = dict() # Creating an empty dictionary to generate distinct random values
@@ -30,9 +34,14 @@ def algorithm_test(algorithm,test_list,p=0,r=0):
     else: 
         wrapped_algorithm = fwrap(algorithm,test_list)
     print("Testing:\t", algorithm.__name__)
+    
     print("Time:\t",round(timeit.timeit(wrapped_algorithm,number=1)*1000.0,6),"ms")
-    print("Output:",test_list,end="\n\n")
-
+    print(test_list,'\nSorted:\t',isSorted(test_list))
+    # if(len(test_list) >=2 and len(test_list) <=100):
+    #     print("Output:",test_list)
+    # elif(len(test_list) > 100):
+    #     print("Sorted:\t",isSorted(test_list))
+    print("")
 # Tests all the algorithms
 def test_all_algorithms(list_size):
     print("Generating Random List:\tn =",list_size)
@@ -41,10 +50,10 @@ def test_all_algorithms(list_size):
     if len(random_list) > 0 and len(random_list) <= 100:
         print("Test List:\t",random_list)
     elif len(random_list) > 100 and len(random_list) > 0:
-        print("Non-Empty List Length=",len(random_list))
+        print("Non-Empty List Length =",len(random_list),"\nSorted:\t",isSorted(random_list))
     print("")
     algorithm_test(InsertionSort,list.copy(random_list))
     algorithm_test(MergeSort,list.copy(random_list),0,last_index)
     algorithm_test(HeapSort,list.copy(random_list))
     algorithm_test(QuickSort,list.copy(random_list),0,last_index)
-    algorithm_test(QuickSortPivot,list.copy(random_list),0,last_index)
+    algorithm_test(QuickSortPivot,list.copy(random_list),0,last_index)  
