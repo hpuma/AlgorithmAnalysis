@@ -1,6 +1,4 @@
-def main():
-    
+from tools import test_all_algorithms
 
-    
 
-main()
+test_all_algorithms(25)
