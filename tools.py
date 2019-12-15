@@ -8,6 +8,12 @@ def isSorted(A):
         if(A[i-1] > A[i]):
             return False
     return True
+def print_runtime(t):
+    if(t >= 1.0):
+        print("Time:\t",round(t,2),"s") 
+    elif(t < 1.0):
+        print("Time:\t",round(t*1000.0,6),"ms") 
+
 # Creates a random_list of size "list_size" where the range of list values is from 1 to list_size-1
 def BuildList(list_size):
     input_values = dict() # Creating an empty dictionary to generate distinct random values
@@ -20,7 +26,6 @@ def BuildList(list_size):
                 input_values[rand_val] = True
                 rand_key = True
     return list(input_values.keys())
-
 # Wraps a function with arguments and returns the same function as a function with no arguments
 # This is used alongised timeit.timeit
 def fwrap(func,*args,**kwargs):
@@ -34,8 +39,7 @@ def algorithm_test(algorithm,test_list,p=0,r=0):
     else: 
         wrapped_algorithm = fwrap(algorithm,test_list)
     print("Testing:\t", algorithm.__name__)
-    
-    print("Time:\t",round(timeit.timeit(wrapped_algorithm,number=1)*1000.0,6),"ms")
+    print_runtime(timeit.timeit(wrapped_algorithm,number=1))
     if(len(test_list) >=2 and len(test_list) <=100):
         print("Output:",test_list,"\nSorted:\t",isSorted(test_list))
     elif(len(test_list) > 100):
@@ -56,3 +60,4 @@ def test_all_algorithms(list_size):
     algorithm_test(HeapSort,list.copy(random_list))
     algorithm_test(QuickSort,list.copy(random_list),0,last_index)
     algorithm_test(QuickSortPivot,list.copy(random_list),0,last_index)  
+    
