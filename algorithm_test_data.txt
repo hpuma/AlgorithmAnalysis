@@ -1,0 +1,160 @@
+OLD R LIMIT:	 1000
+NEW R LIMIT:	 1000002
+Generating Random List:	n = 10
+Test List:	 [5, 1, 8, 7, 6, 3, 10, 4, 9, 2]
+
+Testing:	 InsertionSort
+Time:	 0.0101 milliseconds
+Alt Time:	 0.0 milliseconds
+Output: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] 
+Sorted:	 True
+
+Testing:	 MergeSort
+Time:	 0.0386 milliseconds
+Alt Time:	 0.0 milliseconds
+Output: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] 
+Sorted:	 True
+
+Testing:	 HeapSort
+Time:	 0.0428 milliseconds
+Alt Time:	 0.0 milliseconds
+Output: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] 
+Sorted:	 True
+
+Testing:	 QuickSort
+Time:	 0.0172 milliseconds
+Alt Time:	 0.0 milliseconds
+Output: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] 
+Sorted:	 True
+
+Testing:	 QuickSortPivot
+Time:	 0.0321 milliseconds
+Alt Time:	 0.0 milliseconds
+Output: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] 
+Sorted:	 True
+
+Generating Random List:	n = 100
+Test List:	 [50, 66, 53, 51, 9, 65, 20, 95, 47, 93, 80, 6, 79, 81, 35, 71, 28, 17, 15, 52, 69, 26, 1, 88, 87, 48, 74, 13, 39, 60, 62, 11, 54, 32, 97, 27, 3, 96, 84, 30, 100, 68, 94, 14, 37, 78, 83, 8, 12, 33, 5, 59, 10, 76, 40, 7, 19, 49, 67, 56, 99, 73, 89, 82, 38, 21, 23, 44, 31, 98, 75, 85, 64, 46, 4, 90, 61, 16, 18, 70, 86, 57, 92, 63, 72, 58, 36, 45, 2, 34, 25, 42, 24, 22, 55, 91, 41, 29, 77, 43]
+
+Testing:	 InsertionSort
+Time:	 0.5735 milliseconds
+Alt Time:	 0.0 milliseconds
+Output: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100] 
+Sorted:	 True
+
+Testing:	 MergeSort
+Time:	 0.5116 milliseconds
+Alt Time:	 0.0 milliseconds
+Output: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100] 
+Sorted:	 True
+
+Testing:	 HeapSort
+Time:	 0.7521 milliseconds
+Alt Time:	 0.994205474854 milliseconds
+Output: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100] 
+Sorted:	 True
+
+Testing:	 QuickSort
+Time:	 0.2003 milliseconds
+Alt Time:	 0.0 milliseconds
+Output: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100] 
+Sorted:	 True
+
+Testing:	 QuickSortPivot
+Time:	 0.3024 milliseconds
+Alt Time:	 0.0 milliseconds
+Output: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100] 
+Sorted:	 True
+
+Generating Random List:	n = 1000
+Non-Empty List Length = 1000 
+Sorted:	 False
+
+Testing:	 InsertionSort
+Time:	 49.518 milliseconds
+Alt Time:	 49.874544143677 milliseconds
+Sorted:	 True
+
+Testing:	 MergeSort
+Time:	 5.3697 milliseconds
+Alt Time:	 4.985809326172 milliseconds
+Sorted:	 True
+
+Testing:	 HeapSort
+Time:	 12.1171 milliseconds
+Alt Time:	 12.96329498291 milliseconds
+Sorted:	 True
+
+Testing:	 QuickSort
+Time:	 2.7385 milliseconds
+Alt Time:	 2.991676330566 milliseconds
+Sorted:	 True
+
+Testing:	 QuickSortPivot
+Time:	 4.236 milliseconds
+Alt Time:	 3.992557525635 milliseconds
+Sorted:	 True
+
+Generating Random List:	n = 10000
+Non-Empty List Length = 10000 
+Sorted:	 False
+
+Testing:	 InsertionSort
+Time:	 5.222453 seconds
+Alt Time:	 5.223032 seconds
+Sorted:	 True
+
+Testing:	 MergeSort
+Time:	 65.0807 milliseconds
+Alt Time:	 65.808773040771 milliseconds
+Sorted:	 True
+
+Testing:	 HeapSort
+Time:	 171.6368 milliseconds
+Alt Time:	 171.536684036255 milliseconds
+Sorted:	 True
+
+Testing:	 QuickSort
+Time:	 40.1303 milliseconds
+Alt Time:	 39.916276931763 milliseconds
+Sorted:	 True
+
+Testing:	 QuickSortPivot
+Time:	 53.2776 milliseconds
+Alt Time:	 53.861618041992 milliseconds
+Sorted:	 True
+
+Generating Random List:	n = 100000
+Non-Empty List Length = 100000 
+Sorted:	 False
+
+Testing:	 InsertionSort
+Time:	 9.488375 minutes
+Alt Time:	 9.488383 minutes
+Sorted:	 True
+
+Testing:	 MergeSort
+Time:	 792.952899999932 milliseconds
+Alt Time:	 793.931245803833 milliseconds
+Sorted:	 True
+
+Testing:	 HeapSort
+Time:	 2.538341 seconds
+Alt Time:	 2.539039 seconds
+Sorted:	 True
+
+Testing:	 QuickSort
+Time:	 532.330300000012 milliseconds
+Alt Time:	 532.378911972046 milliseconds
+Sorted:	 True
+
+Testing:	 QuickSortPivot
+Time:	 614.350800000011 milliseconds
+Alt Time:	 614.715337753296 milliseconds
+Sorted:	 True
+
+Generating Random List:	n = 1000000
+Non-Empty List Length = 1000000 
+Sorted:	 False
+
+Testing:	 InsertionSort
