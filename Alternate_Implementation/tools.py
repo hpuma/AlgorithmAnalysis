@@ -14,19 +14,19 @@ def isSorted(A):
 # Takes in the runtime of the algorithm and prints it in the appropriate matter depending on the time length
 def print_runtime(t):
     if(t < 1.0): 
-        print("Time:\t",round(t*1000.0,12),"milliseconds")
+        print("Time:\t",format(t*1000.0000,".4f"),"milliseconds")
     elif(t >= 1.0 and t < 60.0):
         print("Time:\t",round(t,6),"seconds") 
     elif(t >= 60.0 and t < 3600.0):
-        print("Time:\t",round(t/60.0,6),"minutes") 
+        print("Time:\t",round(t/60.0,10),"minutes") 
     elif(t >= 3600.0):
-        print("Time:\t",round(t/3600.0,6),"hours") 
+        print("Time:\t",round(t/3600.0,10),"hours") 
 # Prints the lists details depending on its size and current context
 def print_list(A, before):
     if(before == True):
         print("Before:\t",end="")
     else:
-        print("After:\t",end="")
+        print("Output:\t",end="")
     if len(A) <= 100:
         print(A)
     print("Sorted:\t",isSorted(A)) 
@@ -85,4 +85,52 @@ def test_all_algorithms(list_size):
     algorithm_test(MergeSort,list.copy(random_list),0,last_index)
     algorithm_test(HeapSort,list.copy(random_list))
     algorithm_test(QuickSort,list.copy(random_list),0,last_index)
-    algorithm_test(QuickSortPivot,list.copy(random_list),0,last_index)
+    algorithm_test(QuickSortPivot,list.copy(random_list),0,last_index)  
+# Second implementation
+def insertion_sort_test(rand_list):
+    list_copy = list.copy(rand_list)
+    start_time = time.time()
+    InsertionSort(list_copy)
+    print_runtime(time.time()-start_time)
+    print_list(list_copy,False)
+def merge_sort_test(rand_list):
+    list_copy = list.copy(rand_list)
+    start_time = time.time()
+    MergeSort(list_copy,0,len(list_copy)-1)
+    print_runtime(time.time()-start_time)
+    print_list(list_copy,False)
+def heap_sort_test(rand_list):
+    list_copy = list.copy(rand_list)
+    start_time = time.time()
+    MergeSort(list_copy,0,len(list_copy)-1)
+    print_runtime(time.time()-start_time)
+    print_list(list_copy,False)
+def quick_sorts(rand_list):
+    q1 = list.copy(rand_list)
+    q2 = list.copy(rand_list)
+    q1_time = time.time()
+    QuickSort(q1,0,len(q1)-1)
+    print_runtime(time.time()-q1_time)
+    print_list(q1,False)
+
+    print("\nFor:\t QuickSort Pivot")
+    q2_time = time.time()
+    QuickSort(q2,0,len(q2)-1)
+    print_runtime(time.time()-q2_time)
+    print_list(q2,False)
+def algo_test_all(list_length):
+    rand_list = BuildList(list_length)
+    print("\nGenerating Random List:\t n =",list_length)
+    print_list(rand_list,True)
+
+    print("\nFor:\t",MergeSort.__name__)
+    merge_sort_test(rand_list)
+
+    print("\nFor:\t",HeapSort.__name__)
+    heap_sort_test(rand_list)
+
+    print("\nFor:\t",QuickSort.__name__)
+    quick_sorts(rand_list)
+
+    print("\nFor:\t",InsertionSort.__name__)
+    insertion_sort_test(rand_list)
