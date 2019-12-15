@@ -1,6 +1,8 @@
 import math
 import sys
 from random import randrange
+# Python file containing all of the algorithm implementations
+
 # AUXILARY FUNCTIONS FOR ALGORITHM IMPLEMENTATIONS
 def left(index): # Left and right functions for heapsort
     return (2*index+1)
@@ -75,7 +77,7 @@ def buildMaxHeap(A): # Apply MaxHeap from the  bottom to the top, or from back t
 def HeapSort(A): # Main Heap Sort function
     if len(A) <= 1:
         return A
-    buildMaxHeap(A)
+    buildMaxHeap(A) # Make the list into a maxheap
     last_index = len(A) 
     for i in range(last_index-1,0,-1):
         swap(A,0,i)
