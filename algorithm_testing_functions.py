@@ -7,10 +7,12 @@ import sys
 # Returns a boolean whether or not the input array is sorted in non decreasing order
 # Starts from the second index and compares it to the index before 
 def isSorted(A):
-    for i in range(1,len(A)):
-        if(A[i-1] > A[i]):
+    if(len(A) <= 1):
+        return True
+    for i in range(1,len(A)): 
+        if(A[i-1] > A[i]): # If the previous value is greater than the current value, then the array is not sorted!
             return False
-    return True
+    return True # All previous values have been less than the current iterated value
 # Takes in the runtime of the algorithm and prints it in the appropriate matter depending on the time length
 def print_runtime(t):
     if(t < 1.0): 
