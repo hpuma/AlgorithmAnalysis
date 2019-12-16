@@ -1,3 +1,4 @@
+[Running] python -u "e:\CSC22000-Python\main.py"
 OLD R LIMIT:	 1000
 NEW R LIMIT:	 1000002
 Generating Random List:	n = 10
@@ -158,3 +159,29 @@ Non-Empty List Length = 1000000
 Sorted:	 False
 
 Testing:	 InsertionSort
+Time:	 19.739879 hours
+Alt Time:	 19.739739 hours
+Sorted:	 True
+
+Testing:	 MergeSort
+Time:	 9.69916 seconds
+Alt Time:	 9.699367 seconds
+Sorted:	 True
+
+Testing:	 HeapSort
+Time:	 29.784942 seconds
+Alt Time:	 29.783234 seconds
+Sorted:	 True
+
+Testing:	 QuickSort
+Time:	 6.75955 seconds
+Alt Time:	 6.758887 seconds
+Sorted:	 True
+
+Testing:	 QuickSortPivot
+Time:	 8.242399 seconds
+Alt Time:	 8.241185 seconds
+Sorted:	 True
+
+
+[Done] exited with code=0 in 71723.464 seconds
